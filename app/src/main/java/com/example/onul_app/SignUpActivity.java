@@ -109,14 +109,6 @@ public class SignUpActivity extends Activity {
 
     }
 
-    private void startToast(String msg){
-        Toast.makeText(this,msg,Toast.LENGTH_LONG).show();
-    }
-/*
-    private void gotoLoginActivity(){
-        Intent intent= new Intent(this,LoginActivity.class);
-        startActivity(intent);
-    }
-    */
+    private void startToast(String msg){ Toast.makeText(this,msg,Toast.LENGTH_LONG).show(); }
 
 }

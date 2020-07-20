@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email_join;
     private EditText pwd_join;
     private Button login_btn;
+    private Button password_find_btn;
     private Button sign_up_btn;
     private FirebaseAuth mAuth;
 
@@ -34,10 +35,13 @@ public class LoginActivity extends AppCompatActivity {
         email_join = (EditText)findViewById(R.id.editText);
         pwd_join = (EditText)findViewById(R.id.editText1);
         login_btn = (Button) findViewById(R.id.login_button);
+        password_find_btn=(Button)findViewById(R.id.password_find_button);
         sign_up_btn = (Button) findViewById(R.id.sign_up_button);
 
 
+
         login_btn.setOnClickListener(onClickListener);
+        password_find_btn.setOnClickListener(onClickListener);
         sign_up_btn.setOnClickListener(onClickListener);
 
     }
@@ -56,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
             switch(v.getId()){
                 case R.id.login_button:
                     login();
+                    break;
+                case R.id.password_find_button:
+                    gotoPasswordFindActivity();
                     break;
                 case R.id.sign_up_button:
                     gotoSignUpActivity();
@@ -78,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인 성공");
-                                gotoMainActivity();
+                                gotoMyPageActivity();//gotoMainActivity();
                             } else {
                                 if(task.getException()!=null) {
                                     startToast(task.getException().toString());
@@ -99,6 +106,7 @@ public class LoginActivity extends AppCompatActivity {
     private void gotoMainActivity(){
         Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void gotoSignUpActivity(){
@@ -106,6 +114,15 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void gotoPasswordFindActivity(){
+        Intent intent= new Intent(this,PasswordFindActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoMyPageActivity(){
+        Intent intent = new Intent(this,MyPageActivity.class);
+        startActivity(intent);
+    }
 
 
 }

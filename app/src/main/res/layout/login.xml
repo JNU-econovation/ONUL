@@ -10,7 +10,7 @@
         android:id="@+id/sign_up_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button7"
+        android:layout_below="@+id/password_find_button"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
@@ -87,7 +87,7 @@
         android:textSize="18dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/password_find_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_button"
