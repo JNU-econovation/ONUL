@@ -39,7 +39,7 @@ public class MyPageActivity extends AppCompatActivity {
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         name=(TextView)findViewById(R.id.textView);
         email=(TextView)findViewById(R.id.textView1);
-        password=(EditText)findViewById(R.id.editText);
+        password=(EditText)findViewById(R.id.TextView);
         password_check=(EditText)findViewById(R.id.editText1);
         nickname=(EditText)findViewById(R.id.editText2);
 
@@ -69,7 +69,7 @@ public class MyPageActivity extends AppCompatActivity {
         }
         findViewById(R.id.button).setOnClickListener(onClickListener);
         findViewById(R.id.button1).setOnClickListener(onClickListener);
-        findViewById(R.id.button2).setOnClickListener(onClickListener);
+//        findViewById(R.id.button2).setOnClickListener(onClickListener);
 
 
     }
@@ -93,7 +93,7 @@ public class MyPageActivity extends AppCompatActivity {
     };
 
     private void profileUpdate() {
-        String name = ((EditText)findViewById(R.id.editText)).getText().toString();
+        String name = ((EditText)findViewById(R.id.TextView)).getText().toString();
         String nickname = ((EditText)findViewById(R.id.editText1)).getText().toString();
         String email = ((EditText)findViewById(R.id.editText2)).getText().toString();
 

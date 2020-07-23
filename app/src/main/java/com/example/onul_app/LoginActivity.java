@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        email_join = (EditText)findViewById(R.id.editText);
+        email_join = (EditText)findViewById(R.id.TextView);
         pwd_join = (EditText)findViewById(R.id.editText1);
         login_btn = (Button) findViewById(R.id.login_button);
         password_find_btn=(Button)findViewById(R.id.password_find_button);

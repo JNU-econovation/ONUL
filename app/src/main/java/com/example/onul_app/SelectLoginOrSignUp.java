@@ -1,6 +1,5 @@
 package com.example.onul_app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -41,7 +40,7 @@ public class SelectLoginOrSignUp  extends AppCompatActivity {
     };
 
     private void gotoLoginActivity(){
-        Intent intent= new Intent(this,LoginActivity.class);
+        Intent intent= new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
