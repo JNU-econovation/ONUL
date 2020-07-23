@@ -3,24 +3,18 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/home_button"
+        android:enabled="true"
         android:title="Home"/>
     <item
         android:id="@+id/navigation_share_diary"
         android:icon="@drawable/share_button"
+        android:enabled="true"
         android:title="Share"/>
-    <item
-        android:id="@+id/navigation_plus"
-        android:icon="@drawable/plus_button"
-        android:title="Plus"/>
-
-    <item
-        android:id="@+id/navigation_community"
-        android:icon="@drawable/community_button"
-        android:title="community"/>
 
     <item
         android:id="@+id/navigation_mypage"
         android:icon="@drawable/mypage_button"
+        android:enabled="true"
         android:title="Mypage"/>
 
 </menu>
