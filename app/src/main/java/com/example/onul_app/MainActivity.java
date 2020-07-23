@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.e("onul","제발제발");
         Log.e("onul","제발....");
+        Log.e("onul","제발젭...");
 
         fragmentTransaction.add(R.id.frameLayout, homeFragment).commit();
         Log.e("name","first");
