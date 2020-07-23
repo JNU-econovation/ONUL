@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.e("onul","제발....");
+        Log.e("onul","제발제발");
         fragmentTransaction.add(R.id.frameLayout, homeFragment).commit();
         Log.e("name","first");
         bottomNavigationView=(BottomNavigationView)findViewById(R.id.navigationView);
