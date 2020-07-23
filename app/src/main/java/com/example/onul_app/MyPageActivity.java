@@ -3,9 +3,7 @@ package com.example.onul_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,19 +15,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.Arrays;
-
 public class MyPageActivity extends AppCompatActivity {
     private static final String TAG="MyPageActivity";
+    FirebaseAuth mAuth =FirebaseAuth.getInstance();
     private TextView name;
     private TextView email;
     private EditText password;
@@ -39,7 +33,8 @@ public class MyPageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_page);
+        setContentView(R.layout.fragment_mypage);
+
 
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         name=(TextView)findViewById(R.id.textView);
@@ -89,6 +84,9 @@ public class MyPageActivity extends AppCompatActivity {
                 case R.id.button1:
                     withDrawal();
                     break;
+                case R.id.button2:
+                    signOut();
+                    break;
 
             }
         }
@@ -126,7 +124,7 @@ public class MyPageActivity extends AppCompatActivity {
         }
     }
 
-    void withDrawal(){
+    private void withDrawal(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         user.delete()
@@ -140,6 +138,10 @@ public class MyPageActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    private void signOut() {
+        FirebaseAuth.getInstance().signOut();
     }
 
     private void startToast(String msg){
