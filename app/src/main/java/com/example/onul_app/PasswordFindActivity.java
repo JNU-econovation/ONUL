@@ -30,6 +30,8 @@ public class PasswordFindActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.send_button).setOnClickListener(onClickListener);
+        findViewById(R.id.login_button).setOnClickListener(onClickListener);
+        findViewById(R.id.sign_up_button).setOnClickListener(onClickListener);
         findViewById(R.id.editText).setOnClickListener(onClickListener);
     }
 
@@ -39,7 +41,13 @@ public class PasswordFindActivity extends AppCompatActivity {
             switch(v.getId()){
                 case R.id.send_button:
                     send();
+                case R.id.login_button:
+                    finish();
                     break;
+                case R.id.sign_up_button:
+                    gotoSignUpActivity();
+                    break;
+
             }
         }
     };
@@ -49,7 +57,6 @@ public class PasswordFindActivity extends AppCompatActivity {
 
         if (email.length() > 0) {
             FirebaseAuth auth = FirebaseAuth.getInstance();
-            String emailAddress = "user@example.com";
 
             mAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -69,6 +76,12 @@ public class PasswordFindActivity extends AppCompatActivity {
 
     private void startToast(String msg){
         Toast.makeText(this,msg,Toast.LENGTH_LONG).show();
+    }
+
+    private void gotoSignUpActivity(){
+        Intent intent= new Intent(this,SignUpActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

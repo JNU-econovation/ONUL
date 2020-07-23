@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         sign_up_btn = (Button) findViewById(R.id.sign_up_button);
 
 
-
         login_btn.setOnClickListener(onClickListener);
         password_find_btn.setOnClickListener(onClickListener);
         sign_up_btn.setOnClickListener(onClickListener);
@@ -85,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인 성공");
-                                gotoMyPageActivity();//gotoMainActivity();
+                                gotoMainActivity();
                             } else {
                                 if(task.getException()!=null) {
                                     startToast(task.getException().toString());
@@ -106,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
     private void gotoMainActivity(){
         Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
-        finish();
+        //finish();
     }
 
     private void gotoSignUpActivity(){
@@ -118,11 +117,4 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent= new Intent(this,PasswordFindActivity.class);
         startActivity(intent);
     }
-
-    private void gotoMyPageActivity(){
-        Intent intent = new Intent(this,MyPageActivity.class);
-        startActivity(intent);
-    }
-
-
 }

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,12 +30,23 @@ import java.util.Arrays;
 
 public class MyPageActivity extends AppCompatActivity {
     private static final String TAG="MyPageActivity";
+    private TextView name;
+    private TextView email;
+    private EditText password;
+    private EditText password_check;
+    private EditText nickname;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_page);
 
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        name=(TextView)findViewById(R.id.textView);
+        email=(TextView)findViewById(R.id.textView1);
+        password=(EditText)findViewById(R.id.editText);
+        password_check=(EditText)findViewById(R.id.editText1);
+        nickname=(EditText)findViewById(R.id.editText2);
 
         if(user!=null){
             gotoSignUpActivity();
@@ -49,7 +61,6 @@ public class MyPageActivity extends AppCompatActivity {
                         if (document != null) {
                             if (document.exists()) {
                                 Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-
                             } else {
                                 Log.d(TAG, "No such document");
                                 gotoMemberActivity();
@@ -62,6 +73,9 @@ public class MyPageActivity extends AppCompatActivity {
             });
         }
         findViewById(R.id.button).setOnClickListener(onClickListener);
+        findViewById(R.id.button1).setOnClickListener(onClickListener);
+        findViewById(R.id.button2).setOnClickListener(onClickListener);
+
 
     }
 
@@ -72,6 +86,10 @@ public class MyPageActivity extends AppCompatActivity {
                 case R.id.button:
                     profileUpdate();
                     break;
+                case R.id.button1:
+                    withDrawal();
+                    break;
+
             }
         }
     };
@@ -84,7 +102,7 @@ public class MyPageActivity extends AppCompatActivity {
         if (name.length()>0&&nickname.length()>0&&email.length()>0) {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             // Access a Cloud Firestore instance from your Activity
-            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
             Memberinfo memberinfo = new Memberinfo(name, nickname, email);
@@ -106,6 +124,22 @@ public class MyPageActivity extends AppCompatActivity {
         } else {
             startToast("회원정보를 입력해 주세요.");
         }
+    }
+
+    void withDrawal(){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        user.delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            startToast("회원탈퇴 완료");
+                            //회원 탈퇴했으니 처음 페이지로 이동이 필요함. 스택 고려하여 설계할 것
+                        }
+                    }
+                });
+
     }
 
     private void startToast(String msg){
