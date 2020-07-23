@@ -5,17 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class PasswordFindActivity extends AppCompatActivity {
     private static final String TAG="PasswordFindActivity";
@@ -32,7 +28,7 @@ public class PasswordFindActivity extends AppCompatActivity {
         findViewById(R.id.send_button).setOnClickListener(onClickListener);
         findViewById(R.id.login_button).setOnClickListener(onClickListener);
         findViewById(R.id.sign_up_button).setOnClickListener(onClickListener);
-        findViewById(R.id.editText).setOnClickListener(onClickListener);
+        findViewById(R.id.TextView).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener(){
@@ -53,7 +49,7 @@ public class PasswordFindActivity extends AppCompatActivity {
     };
 
     private void send() {
-        String email =((EditText)findViewById(R.id.editText)).getText().toString();
+        String email =((EditText)findViewById(R.id.TextView)).getText().toString();
 
         if (email.length() > 0) {
             FirebaseAuth auth = FirebaseAuth.getInstance();

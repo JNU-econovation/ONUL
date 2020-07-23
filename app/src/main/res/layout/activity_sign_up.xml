@@ -11,7 +11,7 @@
         android:layout_width="131dp"
         android:layout_height="42dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.612" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/TextView"
         android:layout_width="207dp"
         android:layout_height="31dp"
         android:background="@drawable/blank_signup"
@@ -120,7 +120,7 @@
         android:hint="  이메일 입력"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/TextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.42" />
 

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +37,7 @@ public class SignUpActivity extends Activity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        name_join = (EditText)findViewById(R.id.editText);
+        name_join = (EditText)findViewById(R.id.TextView);
         email_join = (EditText)findViewById(R.id.editText1);
         pwd_join = (EditText)findViewById(R.id.editText2);
         pwd_join_check = (EditText)findViewById(R.id.editText3);

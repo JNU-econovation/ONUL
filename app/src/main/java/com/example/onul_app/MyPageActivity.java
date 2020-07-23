@@ -3,9 +3,7 @@ package com.example.onul_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,16 +15,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.Arrays;
 
 public class MyPageActivity extends AppCompatActivity {
     private static final String TAG="MyPageActivity";
@@ -44,7 +37,7 @@ public class MyPageActivity extends AppCompatActivity {
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         name=(TextView)findViewById(R.id.textView);
         email=(TextView)findViewById(R.id.textView1);
-        password=(EditText)findViewById(R.id.editText);
+        password=(EditText)findViewById(R.id.TextView);
         password_check=(EditText)findViewById(R.id.editText1);
         nickname=(EditText)findViewById(R.id.editText2);
 
@@ -74,7 +67,7 @@ public class MyPageActivity extends AppCompatActivity {
         }
         findViewById(R.id.button).setOnClickListener(onClickListener);
         findViewById(R.id.button1).setOnClickListener(onClickListener);
-        findViewById(R.id.button2).setOnClickListener(onClickListener);
+//        findViewById(R.id.button2).setOnClickListener(onClickListener);
 
 
     }
@@ -95,7 +88,7 @@ public class MyPageActivity extends AppCompatActivity {
     };
 
     private void profileUpdate() {
-        String name = ((EditText)findViewById(R.id.editText)).getText().toString();
+        String name = ((EditText)findViewById(R.id.TextView)).getText().toString();
         String nickname = ((EditText)findViewById(R.id.editText1)).getText().toString();
         String email = ((EditText)findViewById(R.id.editText2)).getText().toString();
 
