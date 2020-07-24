@@ -2,6 +2,7 @@ package com.example.onul_app;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,7 +90,7 @@ public class SignUpActivity extends Activity {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입 성공");
-                                    finish();
+                                    gotoLoginActivity();
                                 } else {
                                     if(task.getException()!=null) {
                                         startToast(task.getException().toString());
@@ -113,4 +114,9 @@ public class SignUpActivity extends Activity {
 
     private void startToast(String msg){ Toast.makeText(this,msg,Toast.LENGTH_LONG).show(); }
 
+    private void gotoLoginActivity(){
+        Intent intent= new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }
