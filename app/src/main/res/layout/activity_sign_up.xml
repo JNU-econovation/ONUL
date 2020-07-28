@@ -168,7 +168,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button3"
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:background="@drawable/ok_buttonl"

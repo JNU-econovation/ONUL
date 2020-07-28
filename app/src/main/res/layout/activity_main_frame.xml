@@ -50,7 +50,7 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/day"
+            android:id="@+id/day_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="57"
@@ -169,7 +169,7 @@
             android:layout_weight="688"
             android:orientation="horizontal"
             android:weightSum="688"
-            android:background="@drawable/emoji_choose_window">
+            android:background="@drawable/emoji_choose_window"/>
 
 
 

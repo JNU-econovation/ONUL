@@ -21,14 +21,14 @@ public class MemberActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member);
 
-        findViewById(R.id.button).setOnClickListener(onClickListener);
+        findViewById(R.id.button3).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener=new  View.OnClickListener(){
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.button:
+                case R.id.button3:
                     profileUpdate();
                     break;
             }
