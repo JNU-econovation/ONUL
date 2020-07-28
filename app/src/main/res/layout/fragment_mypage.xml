@@ -140,7 +140,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/sign_out_button"
         android:layout_width="100dp"
         android:layout_height="33dp"
         android:background="@drawable/blank_gray_mypage"
@@ -155,7 +155,7 @@
         app:layout_constraintVertical_bias="0.72" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/modify_button"
         android:layout_width="100dp"
         android:layout_height="33dp"
         android:background="@drawable/blank_green_mypage"
@@ -170,7 +170,7 @@
         app:layout_constraintVertical_bias="0.72" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/withdrawal_button"
         android:layout_width="100dp"
         android:layout_height="33dp"
         android:background="@drawable/blank_gray_mypage"

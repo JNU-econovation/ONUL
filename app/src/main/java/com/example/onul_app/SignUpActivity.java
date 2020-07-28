@@ -43,7 +43,7 @@ public class SignUpActivity extends Activity {
         pwd_join = (EditText)findViewById(R.id.editText2);
         pwd_join_check = (EditText)findViewById(R.id.editText3);
         nickname_join = (EditText)findViewById(R.id.editText4);
-        sign_up_btn = (Button) findViewById(R.id.button);
+        sign_up_btn = (Button) findViewById(R.id.button3);
         out = (Button) findViewById(R.id.button1);
 
 
@@ -64,7 +64,7 @@ public class SignUpActivity extends Activity {
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.button:
+                case R.id.button3:
                     signUp();
                     break;
                 case R.id.button1:

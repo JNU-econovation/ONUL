@@ -50,7 +50,7 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/day"
+            android:id="@+id/day_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="57"
@@ -227,14 +227,16 @@
                     android:visibility="invisible" />
 
                 <TextView
+                    android:id="@+id/written_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="614"
-                    android:textColor="#111111"
+                    android:layout_gravity="bottom"
+                    android:enabled="false"
                     android:fontFamily="@font/theletssmilel"
-                    android:text="오늘의 내 기분은?"
+                    android:textColor="#111111"
                     android:textSize="15sp"
-                    android:enabled="false"/>
+                    android:scrollbars="vertical"/>
 
                 <View
                     android:layout_width="0dp"
@@ -343,10 +345,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/save_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="130"
-            android:background="@drawable/arrow_right"/>
+            android:background="@drawable/arrow_right" />
 
         <View
             android:layout_width="0dp"

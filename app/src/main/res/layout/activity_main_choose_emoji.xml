@@ -50,7 +50,7 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/day"
+            android:id="@+id/day_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="57"
@@ -191,11 +191,13 @@
             android:layout_height="0dp"
             android:layout_weight="74"
             android:visibility="invisible" />
+
         <Button
+            android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/soso"/>
+            android:background="@drawable/soso" />
 
         <View
             android:layout_width="match_parent"
@@ -205,10 +207,11 @@
 
 
         <Button
+            android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/smile"/>
+            android:background="@drawable/smile" />
 
         <View
             android:layout_width="match_parent"
@@ -217,10 +220,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/tearsofjoy"/>
+            android:background="@drawable/tearsofjoy" />
 
         <View
             android:layout_width="match_parent"
@@ -229,10 +233,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button10"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/xx"/>
+            android:background="@drawable/xx" />
 
         <View
             android:layout_width="match_parent"
@@ -261,11 +266,13 @@
             android:layout_height="0dp"
             android:layout_weight="74"
             android:visibility="invisible" />
+
         <Button
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/good"/>
+            android:background="@drawable/good" />
 
         <View
             android:layout_width="match_parent"
@@ -275,10 +282,11 @@
 
 
         <Button
+            android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/angry"/>
+            android:background="@drawable/angry" />
 
         <View
             android:layout_width="match_parent"
@@ -287,10 +295,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/wow"/>
+            android:background="@drawable/wow" />
 
         <View
             android:layout_width="match_parent"
@@ -299,10 +308,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/sad"/>
+            android:background="@drawable/sad" />
 
         <View
             android:layout_width="match_parent"
@@ -331,11 +341,13 @@
             android:layout_height="0dp"
             android:layout_weight="74"
             android:visibility="invisible" />
+
         <Button
+            android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/yay"/>
+            android:background="@drawable/yay" />
 
         <View
             android:layout_width="match_parent"
@@ -345,10 +357,11 @@
 
 
         <Button
+            android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/upset"/>
+            android:background="@drawable/upset" />
 
         <View
             android:layout_width="match_parent"
@@ -357,10 +370,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/heart"/>
+            android:background="@drawable/heart" />
 
         <View
             android:layout_width="match_parent"
@@ -369,10 +383,11 @@
             android:visibility="invisible" />
 
         <Button
+            android:id="@+id/button12"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="137"
-            android:background="@drawable/sleepy"/>
+            android:background="@drawable/sleepy" />
 
         <View
             android:layout_width="match_parent"
