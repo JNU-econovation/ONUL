@@ -186,23 +186,12 @@
                 android:orientation="horizontal"
                 android:weightSum="688">
 
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="51"
                     android:visibility="invisible" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="64"
-                    android:background="@drawable/lock"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="37"
-                    android:visibility="invisible"/>
 
                 <Button
                     android:layout_width="0dp"
@@ -225,8 +214,9 @@
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="371"
+                    android:layout_weight="472"
                     android:visibility="invisible"/>
+
 
 
             </LinearLayout>
@@ -245,11 +235,11 @@
                 android:orientation="horizontal"
                 android:weightSum="688" >
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="276"
-                android:visibility="invisible" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="276"
+                    android:visibility="invisible" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -296,14 +286,11 @@
                     android:layout_weight="614"
                     android:ems="10"
                     android:fontFamily="@font/theletssmilel"
-
                     android:gravity="start"
                     android:hint="오늘의 내 기분은?"
                     android:inputType="textMultiLine"
                     android:textColor="#111111"
                     android:textSize="15sp" />
-                    <requestFocus
-                    android:enabled="true"/>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
