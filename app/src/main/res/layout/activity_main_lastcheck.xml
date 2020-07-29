@@ -186,18 +186,18 @@
                 android:orientation="horizontal"
                 android:weightSum="688">
 
-                 <View
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="276"
-                     android:visibility="invisible"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="276"
+                    android:visibility="invisible"/>
 
 
-                     <ImageView
-                         android:layout_width="0dp"
-                         android:layout_height="match_parent"
-                         android:layout_weight="136"
-                         android:background="@drawable/tearsofjoy"/>
+                <ImageView
+                    android:id="@+id/emoji"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="136" />
 
                 <View
                     android:layout_width="0dp"
@@ -310,7 +310,7 @@
 
 
 
-            </LinearLayout>
+        </LinearLayout>
 
 
 
