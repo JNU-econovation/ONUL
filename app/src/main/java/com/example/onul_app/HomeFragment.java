@@ -2,10 +2,15 @@ package com.example.onul_app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +23,7 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
 import java.time.DayOfWeek;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
@@ -61,8 +67,7 @@ public class HomeFragment extends Fragment {
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
 
                 startToast(""+date);
-                gotoEmojiSelectActivity();
-
+                gotoEmojiSelectActivity(date);
 
             }
         });
@@ -73,8 +78,10 @@ public class HomeFragment extends Fragment {
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 
-    private void gotoEmojiSelectActivity(){
+    private void gotoEmojiSelectActivity(CalendarDay date){
         Intent intent= new Intent(mainActivity.getApplicationContext(),EmojiSelectActivity.class);
+        String day=date.toString();
+        intent.putExtra("day",day);
         startActivity(intent);
     }
 

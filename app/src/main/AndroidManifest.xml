@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.onul_app">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MemberActivity"/>
         <activity android:name=".SelectLoginOrSignUp" />
         <activity android:name=".EmojiSelectActivity"/>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".WriteDiaryActivity"/>
         <activity android:name=".LastCheckActivity"/>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".thelastmainactivity"/>
+        <activity android:name=".sharediary_2"/>
+        <activity android:name=".sharediary_friend"/>
+        <activity android:name=".sharediary_list_first"/>
+        <activity android:name=".sharediary_emoji_choice"/>
+        <activity android:name=".sharediary_write"/>
+        <activity android:name=".sharediary_lastcheck"/>
+        <activity android:name=".sharediary_list_next"/>
+        <activity android:name=".share_diary_click_record"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".PasswordFindActivity" />
         <activity android:name=".SplashActivity"

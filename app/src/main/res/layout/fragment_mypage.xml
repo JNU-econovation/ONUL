@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#fafafa"
     android:orientation="vertical">
 
 
@@ -67,14 +67,12 @@
             app:layout_constraintVertical_bias="0.416" />
 
 
-
-
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/theletssmilel"
-            android:text="  류현지"
+            android:text="김성혁"
             android:textColor="#6d6d6d"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,11 +82,11 @@
             app:layout_constraintVertical_bias="0.348" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/theletssmilel"
-            android:text="  hahahafb@naver.com"
+            android:text="pickt@gmail.com"
             android:textColor="#6d6d6d"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -185,7 +183,7 @@
         app:layout_constraintVertical_bias="0.784" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/nickname"
         android:layout_width="207dp"
         android:layout_height="31dp"
         android:background="@drawable/blank_signup"
@@ -201,7 +199,7 @@
         app:layout_constraintVertical_bias="0.623" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/password"
         android:layout_width="207dp"
         android:layout_height="31dp"
         android:background="@drawable/blank_signup"
@@ -217,7 +215,7 @@
         app:layout_constraintVertical_bias="0.484" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/password_check"
         android:layout_width="207dp"
         android:layout_height="31dp"
         android:background="@drawable/blank_signup"

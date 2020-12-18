@@ -109,12 +109,12 @@
                     android:visibility="invisible" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="150"
                 android:fontFamily="@font/theletssmilem"
                 android:gravity="center"
-                android:text="May 15"
+                android:text="July 17"
                 android:textSize="18sp" />
             <View
                 android:layout_width="0dp"

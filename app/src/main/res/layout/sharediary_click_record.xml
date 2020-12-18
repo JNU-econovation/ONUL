@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1793">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="354"
+        android:orientation="vertical"
+        android:weightSum="354">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="217"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="94"
+            app:srcCompat="@drawable/logo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="57"
+        android:orientation="horizontal"
+        android:weightSum="960">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="748"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/day_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="57"
+            android:background="@drawable/x" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="155"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="42"
+        android:orientation="vertical"
+        android:weightSum="43">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95"
+        android:orientation="horizontal"
+        android:weightSum="960">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="136"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="688"
+            android:weightSum="688"
+            android:orientation="horizontal"
+            android:background="@drawable/sharediary_day" >
+
+
+            <Button
+                android:id="@+id/day_left_click"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="53"
+                android:background="@drawable/sharediary_day_left_click"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="216"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="150"
+                android:fontFamily="@font/theletssmilem"
+                android:gravity="center"
+                android:text="May 15"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="216"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/day_right_click"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="53"
+                android:background="@drawable/sharediary_day_right_click"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="136"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="43"
+        android:orientation="vertical"
+        android:weightSum="43">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="810"
+        android:orientation="horizontal"
+        android:weightSum="960">
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="136"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="688"
+            android:orientation="vertical"
+            android:weightSum="810"
+            android:background="@drawable/sharediary_emoji_choose_window">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="71"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="136"
+                android:orientation="horizontal"
+                android:weightSum="688">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="276"
+                    android:visibility="invisible"/>
+
+
+                <ImageView
+                    android:id="@+id/emoji"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/smile"
+                    android:layout_weight="136" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="276"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="43"
+                android:visibility="invisible"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="459"
+                android:orientation="horizontal"
+                android:weightSum="688">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="37"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/written_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="614"
+                    android:enabled="false"
+                    android:fontFamily="@font/theletssmilel"
+                    android:gravity="start"
+                    android:scrollbars="vertical"
+                    android:text="공유다이어리 처음 써보는데 정말 좋다!"
+                    android:textColor="#111111"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="37"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="23"
+                android:visibility="invisible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="78"
+                android:orientation="horizontal"
+                android:weightSum="688">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="427"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="98"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/theletssmiler"
+                    android:paddingBottom="15sp"
+                    android:text="수정"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="28"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="98"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/theletssmiler"
+                    android:paddingBottom="15sp"
+                    android:text="삭제"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="37"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="136"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="21"
+        android:orientation="horizontal"
+        android:weightSum="960">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="87"
+        android:orientation="horizontal"
+        android:weightSum="960">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="748"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="130"
+            android:background="@drawable/arrow_right" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="82"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="283"
+        android:orientation="horizontal"
+        android:weightSum="960">
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

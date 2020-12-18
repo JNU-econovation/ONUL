@@ -109,12 +109,12 @@
                 android:visibility="invisible" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="85dp"
                 android:layout_height="match_parent"
                 android:layout_weight="150"
                 android:fontFamily="@font/theletssmilem"
                 android:gravity="center"
-                android:text="May 15"
+                android:text="July 17"
                 android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
@@ -217,10 +217,11 @@
                     android:visibility="invisible"/>
 
                 <Button
+                    android:id="@+id/stt_button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="64"
-                    android:background="@drawable/mike"/>
+                    android:background="@drawable/mike" />
 
                 <View
                     android:layout_width="0dp"
@@ -252,10 +253,11 @@
                 android:visibility="invisible" />
 
                 <ImageView
+                    android:id="@+id/emoji"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="136"
-                    android:background="@drawable/tearsofjoy" />
+                    android:layout_weight="136"/>
+                    //android:background="@drawable/tearsofjoy"
 
                 <View
                     android:layout_width="0dp"

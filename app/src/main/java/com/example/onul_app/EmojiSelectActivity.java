@@ -2,8 +2,10 @@ package com.example.onul_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,11 +25,16 @@ public class EmojiSelectActivity extends AppCompatActivity {
     private Button rhj_tt;
     private Button rhj_sleepy;
     private Button day_button;
+    private String day;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_choose_emoji);
+
+        Intent intent = getIntent();
+
+        day = intent.getExtras().getString("day");
 
         rhj_expressionless = (Button) findViewById(R.id.button1);
         rhj_happy = (Button) findViewById(R.id.button2);
@@ -75,7 +82,7 @@ public class EmojiSelectActivity extends AppCompatActivity {
                 case R.id.button10:
                 case R.id.button11:
                 case R.id.button12:
-                    WriteDiaryActivity();
+                    WriteDiaryActivity(v.getId());
                     break;
                 case R.id.day_button:
                     finish();
@@ -83,10 +90,84 @@ public class EmojiSelectActivity extends AppCompatActivity {
         }
     };
 
-    private void WriteDiaryActivity(){
-        Intent intent= new Intent(this,WriteDiaryActivity.class);
-        startActivity(intent);
+    private void WriteDiaryActivity(int name){
+
+        if(name==R.id.button1) {
+            startToast(""+name);
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            intent.putExtra("emoji", name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button2){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button3){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button4){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button5){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button6){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button7){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button8){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button9){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button10){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button11){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }else if(name==R.id.button12){
+            Intent intent = new Intent(this, WriteDiaryActivity.class);
+            startToast(""+name);
+            intent.putExtra("emoji",name);
+            intent.putExtra("day",day);
+            startActivity(intent);
+        }
+
     }
 
+    private void startToast(String msg){ Toast.makeText(this,msg,Toast.LENGTH_LONG).show(); }
 }
 

@@ -4,6 +4,7 @@ package com.example.onul_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,10 +13,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpActivity extends Activity {
 
@@ -28,6 +36,9 @@ public class SignUpActivity extends Activity {
     private Button sign_up_btn;
     private Button out;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private String userId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +46,7 @@ public class SignUpActivity extends Activity {
         setContentView(R.layout.activity_sign_up);
 
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        db = FirebaseFirestore.getInstance();
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -80,6 +92,13 @@ public class SignUpActivity extends Activity {
         String name=name_join.getText().toString();
         String nickname=nickname_join.getText().toString();
 
+        Map<String, Object> user = new HashMap<>();
+        user.put("email", email);
+        user.put("password",password);
+        user.put("name", name);
+        user.put("nickname", nickname);
+
+
         if(email.length()>0&&password.length()>0&&password_check.length()>0&&name.length()>0&&nickname.length()>0){
             if(password.equals(password_check))
             {
@@ -88,6 +107,36 @@ public class SignUpActivity extends Activity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    /*
+                                    db.collection("users")
+                                            .add(user)
+                                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                                @Override
+                                                public void onSuccess(DocumentReference documentReference) {
+                                                    Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.w(TAG, "Error adding document", e);
+                                                }
+                                            });
+                                     */
+                                    userId=mAuth.getCurrentUser().getUid();
+                                    DocumentReference documentReference=db.collection("users").document(userId);
+                                   documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            Log.d(TAG, "DocumentSnapshot successfully written!");
+                                        }
+                                    })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.w(TAG, "Error writing document", e);
+                                                }
+                                            });
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입 성공");
                                     gotoLoginActivity();

@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
@@ -15,17 +17,34 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import org.w3c.dom.Text;
 
 public class MypageFragment extends Fragment {
     MainActivity mainActivity;
+
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private String userId;
 
     private Context context;
     private Button modify_button;
     private Button withdrawal_button;
     private Button sign_out_button;
+    private TextView name;
+    private TextView email;
+    private EditText password;
+    private EditText password_check;
+    private EditText nickname;
 
 
     @Override
@@ -48,6 +67,29 @@ public class MypageFragment extends Fragment {
         ViewGroup pageView=(ViewGroup)inflater.inflate(R.layout.fragment_mypage,container,false);
 
         context=container.getContext();
+
+        name=(TextView)pageView.findViewById(R.id.name);
+        email=(TextView)pageView.findViewById(R.id.email);
+        password=(EditText)pageView.findViewById(R.id.password);
+        password_check=(EditText)pageView.findViewById(R.id.password_check);
+        nickname=(EditText)pageView.findViewById(R.id.nickname);
+
+        mAuth=FirebaseAuth.getInstance();
+        db=FirebaseFirestore.getInstance();
+
+        userId=mAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference=db.collection("users").document(userId);
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                name.setText(documentSnapshot.getString("name"));
+                email.setText(documentSnapshot.getString("email"));
+                nickname.setText(documentSnapshot.getString("nickname"));
+            }
+        });
+
+
 
         modify_button = pageView.findViewById(R.id.modify_button); //수정하기 버튼
         withdrawal_button = pageView.findViewById(R.id.withdrawal_button); //탈퇴하기 버튼
